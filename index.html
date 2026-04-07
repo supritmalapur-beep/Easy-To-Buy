@@ -1861,7 +1861,7 @@
     const city = document.getElementById('addressCity').value;
     const state = document.getElementById('addressState').value;
     const location = `${city}, ${state}, ${country}`.replace(/^, |, $|, , /g, '');
-    const mapUrl = `https://www.google.com/maps/embed/v1/search?key=AIzaSyDKVYaGDE1aBb6P0bLlFU5k_HLbvQFBzYM&q=${encodeURIComponent(location)}`;
+    const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
     const mapFrame = document.getElementById('addressMapFrame');
     if (mapFrame) {
       mapFrame.src = mapUrl;
